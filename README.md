@@ -1,8 +1,8 @@
 # README
 
 # イメージのビルドとレイヤーの表示
-## ubiを親に持つカスタムコンテナーイメージをビルドする。
-## 生成されたイメージのヒストリーを確認することで、ubiの上の新たなレイヤーが構築されていることを確認する。
+* ubiを親に持つカスタムコンテナーイメージをビルドする。
+* 生成されたイメージのヒストリーを確認することで、ubiの上の新たなレイヤーが構築されていることを確認する。
 ```
 [student@workstation podman-demo]$ cat workdir/Containerfile
 FROM ubi9/ubi
@@ -50,8 +50,8 @@ ID            CREATED         CREATED BY                                     SIZ
 ```
 
 ## ２つのボリュームマウントの例
-## 外部ディレクトリをマウントして、コンテナー内部でマウントポイントにファイルを格納する。
-## コンテナーのプロセスが終了した後も外部ディレクトリにファイルが格納されていることを確認する。
+* 外部ディレクトリをマウントして、コンテナー内部でマウントポイントにファイルを格納する。
+* コンテナーのプロセスが終了した後も外部ディレクトリにファイルが格納されていることを確認する。
 ```
 [student@workstation podman-demo]$ mkdir data1 data2
 [student@workstation podman-demo]$ podman run -it -v ~/podman-demo/data1:/data1:Z -v ~/podman-demo/data2:/data2:Z  localhost/hellodo180
