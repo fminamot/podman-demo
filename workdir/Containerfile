@@ -1,0 +1,2 @@
+FROM ubi9/ubi
+RUN mkdir /data1 /data2
