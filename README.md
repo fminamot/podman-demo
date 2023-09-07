@@ -1,6 +1,7 @@
 # README
 
 ## ２つのボリュームマウントの例
+```
 [student@workstation podman-demo]$ mkdir data1 data2
 [student@workstation podman-demo]$ podman build -t hellodo180 workdir
 [student@workstation podman-demo]$ podman run -it -v ~/podman-demo/data1:/data1:Z -v ~/podman-demo/data2:/data2:Z  localhost/hellodo180
@@ -12,5 +13,6 @@ exit
 data1
 [student@workstation podman-demo] $ cat data1/data1.txt 
 data1
+```
 
 
